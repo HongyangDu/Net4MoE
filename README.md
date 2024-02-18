@@ -4,6 +4,8 @@ This repository hosts a demonstration of the case study as presented in the pape
 
 > **"Toward Scalable Generative AI via Mixture of Experts in Mobile Edge Networks" [Download Paper](https://arxiv.org/pdf/2402.09756.pdf)**
 
+<img src="readme/1.png" width = "100%">
+
 ---
 
 ## 🔧 Environment Setup
@@ -39,8 +41,6 @@ Call GPT API to build a gating network and several text generation experts who a
 ## 🔍 Step 2:
 Using GPT API to evaluate the generated text and get the explicit score (https://arxiv.org/pdf/2304.00723.pdf ). 
 
-<img src="readme/2.png" width = "100%">
-
 The prompt here could be:
 > Score the following story on a continual scale from 0 (worst) to 10 (best), where a score of 0 means "The story makes no sense and is totally not understandable" and a score of 10 means "The story is perfect-written and highly consistent ".
 
@@ -59,6 +59,10 @@ Generate the SNR corresponding to each expert randomly, and calculate the comput
 
 ## 🔍 Step 7:
 Train the DRL to select the suitable experts in the mobile edge network.
+
+<img src="readme/2.png" width = "100%">
+
+<img src="readme/3.png" width = "100%">
 
 ## 📚 Cite Our Work
 
