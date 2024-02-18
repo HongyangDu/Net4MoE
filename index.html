@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>MoE4OPT</title>
+  <title>NET4MoE</title>
   <link rel="icon" type="image/x-icon" href="static/images/favico.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -65,11 +65,11 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Mixture of Experts for Network Optimization: A Large Language Model-enabled Approach</h1>
+            <h1 class="title is-1 publication-title">Toward Scalable Generative AI via Mixture of Experts in Mobile Edge Networks</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-               Hongyang Du, Guangyuan Liu, Yijing Lin, Dusit Niyato, Jiawen Kang, Zehui Xiong, Dong In Kim</span>
+               Jiacheng Wang, Hongyang Du, Dusit Niyato, Jiawen Kang, Zehui Xiong, Dong In Kim, Khaled B. Letaief</span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
@@ -80,7 +80,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2402.09756.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2402.06942.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -102,7 +102,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/HongyangDu/MoE4OPT" target="_blank"
+                    <a href="https://github.com/HongyangDu/Net4MoE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -113,7 +113,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2402.09756" target="_blank"
+                  <a href="https://arxiv.org/abs/2402.06942" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -138,7 +138,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          Optimizing various wireless user tasks poses a significant challenge for networking systems because of the expanding range of user requirements. Despite advancements in Deep Reinforcement Learning (DRL), the need for customized optimization tasks for individual users complicates developing and applying numerous DRL models, leading to substantial computation resource and energy consumption and can lead to inconsistent outcomes. To address this issue, we propose a novel approach utilizing a Mixture of Experts (MoE) framework, augmented with Large Language Models (LLMs), to analyze user objectives and constraints effectively, select specialized DRL experts, and weigh each decision from the participating experts. Specifically, we develop a gate network to oversee the expert models, allowing a collective of experts to tackle a wide array of new tasks. Furthermore, we innovatively substitute the traditional gate network with an LLM, leveraging its advanced reasoning capabilities to manage expert model selection for joint decisions. Our proposed method reduces the need to train new DRL models for each unique optimization problem, decreasing energy consumption and AI model implementation costs. The LLM-enabled MoE approach is validated through a general maze navigation task and a specific network service provider utility maximization task, demonstrating its effectiveness and practical applicability in optimizing complex networking systems. 
+          The advancement of generative artificial intelligence (GAI) has driven revolutionary applications like ChatGPT. The widespread of these applications relies on the mixture of experts (MoE), which contains multiple experts and selectively engages them for each task to lower operation costs while maintaining performance. Despite MoE, GAI faces challenges in resource consumption when deployed on user devices. This paper proposes mobile edge networks supported MoE-based GAI. We first review the MoE from traditional AI and GAI perspectives, including structure, principles, and applications. We then propose a framework that transfers subtasks to devices in mobile edge networks, aiding GAI model operation on user devices. We discuss challenges in this process and introduce a deep reinforcement learning based algorithm to select edge devices for subtask execution. Experimental results will show that our framework not only facilitates GAI's deployment on resource-limited devices but also generates higher-quality content compared to methods without edge network support. 
           </p>
         </div>
       </div>
@@ -152,51 +152,80 @@
   <div class="hero-body">
     <div class="container is-max-desktop content">
 	
-	<p>The following figure shows two network optimization strategies. <em>Part A</em> demonstrates the drawbacks of training distinct AI models for different user requirements, emphasizing the costs of excessive AI model deployment. <em>Part B</em> presents our LLM-enabled MoE approach, using a limited set of DRL models to efficiently address a variety of user tasks.</p>
-    <img src="readme/1.png" width="60%" alt="Network Optimization Strategies">
+	<p>This repository hosts a demonstration of the case study as presented in the paper</p>
+<blockquote>
+    <p><strong>"Toward Scalable Generative AI via Mixture of Experts in Mobile Edge Networks" <a href="https://arxiv.org/pdf/2402.09756.pdf">Download Paper</a></strong></p>
+</blockquote>
 
-    <p><strong>The problem we solve:</strong> <em style="color: darkred;">How can we achieve effective network optimization without using numerous DRL models individually trained for each specific task?</em></p>
-    <hr>
+<img src="readme/1.png" style="width: 100%;">
 
-    <h2>🔧 Environment Setup</h2>
-    <p>To establish a new conda environment, run the following command:</p>
-    <pre><code>conda create --name moeopt python==3.7</code></pre>
+<hr>
 
-    <h2>⚡ Activate Environment</h2>
-    <p>Activate the environment with:</p>
-    <pre><code>conda activate moeopt</code></pre>
+<h2>🔧 Environment Setup</h2>
 
-    <h2>📦 Install Required Packages</h2>
-<p>Install the necessary packages one by one using pip:</p>
-<pre><code>pip install torch
-pip install opencv-python==4.1.2.30
-pip install scipy
-pip install torchvision
-pip install scikit-image</code></pre>
+<p>To create a new conda environment, execute the following command:</p>
 
+<pre><code>conda create --name netmoe python==3.8</code></pre>
 
-    <h2>🏃‍♀️ Run the Program</h2>
-    <p>Execute <code>main.py</code> to initiate the program.</p>
+<h2>⚡Activate Environment</h2>
 
-    <h2>🔍 Case Study 1: Maze Navigation Task</h2>
-    <p>LLM-enabled MoE framework demonstrated in a maze navigation task, using an ensemble of DRL models for diverse tasks as expert models for the LLM to infer and address user tasks.</p>
-    <img src="readme/2.png" width="100%" alt="Maze Navigation Task">
+<p>Activate the created environment with:</p>
 
-    <h2>🔍 Case Study 2: Service Provider Utility Maximization Problem</h2>
-    <p>Illustration of the system model, market interactions, and the impact of varying user requirements on service payments and power allocation strategies.</p>
-    <img src="readme/3.png" width="60%" alt="Service Provider Utility Maximization Problem">
+<pre><code>conda activate netmoe</code></pre>
 
-    <hr>
+<h2>📦 Install Required Packages</h2>
 
-    <h2>📚 Cite Our Work</h2>
-    <p>If our code aids your research, please cite our work:</p>
-    <pre><code>@article{du2024mixture,
-  title={Mixture of Experts for Network Optimization: A Large Language Model-enabled Approach},
-  author={Du, Hongyang and Liu, Guangyuan and Lin, Yijing and Niyato, Dusit and Kang, Jiawen and Xiong, Zehui and Kim, Dong In},
-  journal={arXiv preprint arXiv:2402.09756},
-  year={2024},
-  month = {Feb.}
-}</code></pre>
+<p>The following packages can be installed using pip:</p>
+
+<pre><code>pip install transformers
+pip install gym
+pip install torch
+pip install numpy
+pip install matplotlib</code></pre>
+
+<h2>🔍 Step 1:</h2>
+<p>Call GPT API to build a gating network and several text generation experts who are good at generating text with different contents. The gate function can segment input prompts and selected the experts based on semantics, and can also fuse text segments based on semantics. <a href="https://platform.openai.com/docs/guides/text-generation">https://platform.openai.com/docs/guides/text-generation</a></p>
+
+<h2>🔍 Step 2:</h2>
+<p>Using GPT API to evaluate the generated text and get the explicit score (<a href="https://arxiv.org/pdf/2304.00723.pdf">https://arxiv.org/pdf/2304.00723.pdf</a>).</p>
+<p>The prompt here could be:</p>
+<blockquote>
+    <p>Score the following story on a continual scale from 0 (worst) to 10 (best), where a score of 0 means "The story makes no sense and is totally not understandable" and a score of 10 means "The story is perfect-written and highly consistent".</p>
+</blockquote>
+
+<h2>🔍 Step 3:</h2>
+<p>Input the prompt (a sentence) and use the gating network to split the prompt into several words and selected experts to generate the text based on these words.</p>
+
+<h2>🔍 Step 4:</h2>
+<p>Use the gating network to fuse the texts generated by different experts. The prompt could be:</p>
+<blockquote>
+    <p>‘Combine the following passages together to form a complete story’</p>
+</blockquote>
+
+<h2>🔍 Step 5:</h2>
+<p>Evaluate the text to get the scores. Taking three experts as an example, the explicit scores of the generated texts are given in the excel table. At the same time, the table also gives the word count of the generated texts, which corresponds to the transfer load of experts in the edge network.</p>
+
+<h2>🔍 Step 6:</h2>
+<p>Generate the SNR corresponding to each expert randomly, and calculate the computing and transmission cost (based on the Shannon Theory). The computing cost is the number of words in the generated text multiplied by a coefficient.</p>
+
+<h2>🔍 Step 7:</h2>
+<p>Train the DRL to select the suitable experts in the mobile edge network.</p>
+
+<img src="readme/2.png" style="width: 100%;">
+
+<img src="readme/3.png" style="width: 100%;">
+
+<h2>📚 Cite Our Work</h2>
+
+<p>Should our code assist in your research, please acknowledge our work by citing:</p>
+
+<pre><code>@article{wang2024toward,
+  title={Toward Scalable Generative AI via Mixture of Experts in Mobile Edge Networks},
+  author={Wang, Jiacheng and Du, Hongyang and Niyato, Dusit and Kang, Jiawen and Xiong, Zehui and Kim, Dong In and Letaief, Khaled B},
+  journal={arXiv preprint arXiv:2402.06942},
+  year={2024}
+}
+</code></pre>
 	
 </div>
 </div>

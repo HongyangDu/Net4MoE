@@ -69,11 +69,11 @@ Train the DRL to select the suitable experts in the mobile edge network.
 Should our code assist in your research, please acknowledge our work by citing:
 
 ```bibtex
-@article{du2024mixture,
-  title={Mixture of Experts for Network Optimization: A Large Language Model-enabled Approach},
-  author={Du, Hongyang and Liu, Guangyuan and Lin, Yijing and Niyato, Dusit and Kang, Jiawen and Xiong, Zehui and Kim, Dong In},
-  journal={arXiv preprint arXiv:2402.09756},
-  year={2024},
-  month = {Feb.}
+@article{wang2024toward,
+  title={Toward Scalable Generative AI via Mixture of Experts in Mobile Edge Networks},
+  author={Wang, Jiacheng and Du, Hongyang and Niyato, Dusit and Kang, Jiawen and Xiong, Zehui and Kim, Dong In and Letaief, Khaled B},
+  journal={arXiv preprint arXiv:2402.06942},
+  year={2024}
 }
+
 ```
