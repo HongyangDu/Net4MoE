@@ -60,9 +60,9 @@ Generate the SNR corresponding to each expert randomly, and calculate the comput
 ## 🔍 Step 7:
 Train the DRL to select the suitable experts in the mobile edge network.
 
-<img src="readme/2.png" width = "100%">
+<img src="readme/2.png" width = "60%">
 
-<img src="readme/3.png" width = "100%">
+<img src="readme/3.png" width = "60%">
 
 ## 📚 Cite Our Work
 
